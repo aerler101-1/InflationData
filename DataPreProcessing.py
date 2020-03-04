@@ -13,6 +13,7 @@ X = array[:,2:14]
 Y = array[:,15]
 df = data2.drop(['year','CPI','CPI_Core','Unnamed: 0'],1) #dataframe to refrence drop year since it is non essential for the model and cpi since that is our target variable
 df2 = df.drop('inflation',1) # dataframe with global infaltion removed, this variable appears to be overpowering the model
+#Missing Value Ratio
 MISS= train.isnull().sum()/len(train)*100
 print('Missing Value Ratio',MISS) #Prints Missing value ratios
 # Variance 
